@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 '''
 This script can be used to open a link stored in a file.
 Call this script on a file that simply contains a url.
@@ -12,6 +12,5 @@ import sys
 for file in sys.argv[1:]:
     if os.path.exists(file):
         with open(file) as f:
-            link = f.read()
-        os.system(f'open {link}')
+            os.system(f'open {f.read()}')
 
